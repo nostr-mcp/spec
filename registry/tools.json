@@ -1,0 +1,911 @@
+{
+  "spec_version": "0.1.0",
+  "registry_version": "0.1.0",
+  "tools": [
+    {
+      "name": "nostr_keys_generate",
+      "status": "stable",
+      "summary": "Generate a new Nostr keypair.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_import",
+      "status": "stable",
+      "summary": "Import a secret key (nsec or npub).",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_remove",
+      "status": "stable",
+      "summary": "Remove a key by label.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_list",
+      "status": "stable",
+      "summary": "List stored keys (metadata only).",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_set_active",
+      "status": "stable",
+      "summary": "Set active key by label.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_get_active",
+      "status": "stable",
+      "summary": "Get active key (metadata only).",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_rename_label",
+      "status": "stable",
+      "summary": "Rename a key label.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_export",
+      "status": "stable",
+      "summary": "Export a key in bech32 or hex formats.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_verify",
+      "status": "stable",
+      "summary": "Verify key format and validity.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_keys_derive_public",
+      "status": "stable",
+      "summary": "Derive public key from a private key.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_config_dir_get",
+      "status": "stable",
+      "summary": "Get config directory path.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_config_dir_set",
+      "status": "stable",
+      "summary": "Set config directory path.",
+      "nip": [],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_relays_set",
+      "status": "stable",
+      "summary": "Set relays and connect.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_relays_connect",
+      "status": "stable",
+      "summary": "Connect to configured relays.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_relays_disconnect",
+      "status": "stable",
+      "summary": "Disconnect or remove relays.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_relays_status",
+      "status": "stable",
+      "summary": "List relay status and flags.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_list",
+      "status": "stable",
+      "summary": "List events using presets or filters.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_query",
+      "status": "stable",
+      "summary": "Query events with NIP-01 filters.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_text",
+      "status": "stable",
+      "summary": "Post a kind 1 text note.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_thread",
+      "status": "stable",
+      "summary": "Post a kind 11 thread event.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_group_chat",
+      "status": "stable",
+      "summary": "Post a kind 9 group chat message.",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_reaction",
+      "status": "stable",
+      "summary": "Post a kind 7 reaction.",
+      "nip": [
+        "nip-25"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_publish_signed",
+      "status": "stable",
+      "summary": "Publish a fully signed Nostr event.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_reply",
+      "status": "stable",
+      "summary": "Post a reply/comment with NIP-10 or NIP-22.",
+      "nip": [
+        "nip-10",
+        "nip-22"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_comment",
+      "status": "stable",
+      "summary": "Post a kind 1111 comment.",
+      "nip": [
+        "nip-22"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_create_poll",
+      "status": "stable",
+      "summary": "Create a kind 1068 poll.",
+      "nip": [
+        "nip-88"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_vote_poll",
+      "status": "stable",
+      "summary": "Vote on a poll (kind 1018).",
+      "nip": [
+        "nip-88"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_get_poll_results",
+      "status": "stable",
+      "summary": "Fetch poll results.",
+      "nip": [
+        "nip-88"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_put_user",
+      "status": "stable",
+      "summary": "Add or update group user (kind 9000).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_remove_user",
+      "status": "stable",
+      "summary": "Remove group user (kind 9001).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_edit_metadata",
+      "status": "stable",
+      "summary": "Edit group metadata (kind 9002).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_delete_event",
+      "status": "stable",
+      "summary": "Delete group event (kind 9005).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_create_group",
+      "status": "stable",
+      "summary": "Create group (kind 9007).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_delete_group",
+      "status": "stable",
+      "summary": "Delete group (kind 9008).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_create_invite",
+      "status": "stable",
+      "summary": "Create group invite (kind 9009).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_join",
+      "status": "stable",
+      "summary": "Request to join group (kind 9021).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_groups_leave",
+      "status": "stable",
+      "summary": "Request to leave group (kind 9022).",
+      "nip": [
+        "nip-29"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_metadata_set",
+      "status": "stable",
+      "summary": "Set kind 0 profile metadata.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_metadata_get",
+      "status": "stable",
+      "summary": "Get local profile metadata.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_metadata_fetch",
+      "status": "stable",
+      "summary": "Fetch profile metadata from relays.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_follows_set",
+      "status": "stable",
+      "summary": "Set follow list (kind 3).",
+      "nip": [
+        "nip-02"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_follows_get",
+      "status": "stable",
+      "summary": "Get local follow list.",
+      "nip": [
+        "nip-02"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_follows_fetch",
+      "status": "stable",
+      "summary": "Fetch follow list from relays.",
+      "nip": [
+        "nip-02"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_follows_add",
+      "status": "stable",
+      "summary": "Add follow and publish.",
+      "nip": [
+        "nip-02"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_follows_remove",
+      "status": "stable",
+      "summary": "Remove follow and publish.",
+      "nip": [
+        "nip-02"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_nip19_convert",
+      "status": "planned",
+      "summary": "Convert between NIP-19 encodings.",
+      "nip": [
+        "nip-19"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_nip19_analyze",
+      "status": "planned",
+      "summary": "Analyze NIP-19 entity.",
+      "nip": [
+        "nip-19"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_long_form",
+      "status": "planned",
+      "summary": "Post a kind 30023 long-form note.",
+      "nip": [
+        "nip-23"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_list_long_form",
+      "status": "planned",
+      "summary": "List kind 30023 long-form notes.",
+      "nip": [
+        "nip-23"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_zaps_get_received",
+      "status": "planned",
+      "summary": "List received zaps.",
+      "nip": [
+        "nip-57"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_zaps_get_sent",
+      "status": "planned",
+      "summary": "List sent zaps.",
+      "nip": [
+        "nip-57"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_zaps_get_all",
+      "status": "planned",
+      "summary": "List sent and received zaps.",
+      "nip": [
+        "nip-57"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_zaps_prepare_anonymous",
+      "status": "planned",
+      "summary": "Prepare anonymous zap request.",
+      "nip": [
+        "nip-57"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_zaps_validate_receipt",
+      "status": "planned",
+      "summary": "Validate a zap receipt.",
+      "nip": [
+        "nip-57"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_profiles_get",
+      "status": "planned",
+      "summary": "Fetch profile metadata for a pubkey.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_create_text",
+      "status": "planned",
+      "summary": "Create unsigned kind 1 note.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_sign",
+      "status": "planned",
+      "summary": "Sign an unsigned Nostr event.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_post_anonymous",
+      "status": "planned",
+      "summary": "Post anonymous note with one-time key.",
+      "nip": [
+        "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  ]
+}
