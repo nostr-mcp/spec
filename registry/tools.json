@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.0",
-  "registry_version": "0.1.0",
+  "spec_version": "0.1.1",
+  "registry_version": "0.1.1",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -733,7 +733,7 @@
     },
     {
       "name": "nostr_events_post_long_form",
-      "status": "planned",
+      "status": "stable",
       "summary": "Post a kind 30023 long-form note.",
       "nip": [
         "nip-23"
@@ -749,7 +749,7 @@
     },
     {
       "name": "nostr_events_list_long_form",
-      "status": "planned",
+      "status": "stable",
       "summary": "List kind 30023 long-form notes.",
       "nip": [
         "nip-23"
