@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11
+
+- add NIP-89 handler recommendation tools
+
 ## 0.1.10
 
 - add NIP-30 emoji parsing tool

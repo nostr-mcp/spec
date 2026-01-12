@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.10",
-  "registry_version": "0.1.10",
+  "spec_version": "0.1.11",
+  "registry_version": "0.1.11",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -304,6 +304,38 @@
       "summary": "Decrypt NIP-44 ciphertext.",
       "nip": [
         "nip-44"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_handlers_recommend",
+      "status": "stable",
+      "summary": "Publish a NIP-89 handler recommendation event.",
+      "nip": [
+        "nip-89"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_handlers_register",
+      "status": "stable",
+      "summary": "Publish a NIP-89 handler information event.",
+      "nip": [
+        "nip-89"
       ],
       "input_schema": {
         "type": "object",
