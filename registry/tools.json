@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.7",
-  "registry_version": "0.1.7",
+  "spec_version": "0.1.8",
+  "registry_version": "0.1.8",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -240,6 +240,38 @@
       "summary": "Fetch relay information document.",
       "nip": [
         "nip-11"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_nip05_resolve",
+      "status": "stable",
+      "summary": "Resolve a NIP-05 identifier to a pubkey and relay hints.",
+      "nip": [
+        "nip-05"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_nip05_verify",
+      "status": "stable",
+      "summary": "Verify a NIP-05 identifier against a pubkey.",
+      "nip": [
+        "nip-05"
       ],
       "input_schema": {
         "type": "object",

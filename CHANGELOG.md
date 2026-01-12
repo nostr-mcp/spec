@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8
+
+- add NIP-05 identifier resolve/verify tools
+
 ## 0.1.7
 
 - add NIP-50 search tool
