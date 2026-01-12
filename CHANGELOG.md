@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+- add NIP-9 deletion tool
+
 ## 0.1.4
 
 - add NIP-27 reference parsing tool

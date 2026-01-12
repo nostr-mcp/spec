@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.4",
-  "registry_version": "0.1.4",
+  "spec_version": "0.1.5",
+  "registry_version": "0.1.5",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -769,6 +769,22 @@
       "summary": "Parse nostr: references in text content.",
       "nip": [
         "nip-27"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_delete",
+      "status": "stable",
+      "summary": "Delete events or coordinates.",
+      "nip": [
+        "nip-09"
       ],
       "input_schema": {
         "type": "object",
