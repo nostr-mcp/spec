@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.6",
-  "registry_version": "0.1.6",
+  "spec_version": "0.1.7",
+  "registry_version": "0.1.7",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -272,6 +272,22 @@
       "summary": "Query events with NIP-01 filters.",
       "nip": [
         "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_search",
+      "status": "stable",
+      "summary": "Search events using relay search.",
+      "nip": [
+        "nip-50"
       ],
       "input_schema": {
         "type": "object",

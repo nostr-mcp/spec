@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.7
+
+- add NIP-50 search tool
+
 ## 0.1.6
 
 - add NIP-11 relay info tool
