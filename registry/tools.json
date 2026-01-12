@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.1",
-  "registry_version": "0.1.1",
+  "spec_version": "0.1.2",
+  "registry_version": "0.1.2",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -845,7 +845,7 @@
     },
     {
       "name": "nostr_profiles_get",
-      "status": "planned",
+      "status": "stable",
       "summary": "Fetch profile metadata for a pubkey.",
       "nip": [
         "nip-01"
@@ -861,7 +861,7 @@
     },
     {
       "name": "nostr_events_create_text",
-      "status": "planned",
+      "status": "stable",
       "summary": "Create unsigned kind 1 note.",
       "nip": [
         "nip-01"
@@ -877,7 +877,7 @@
     },
     {
       "name": "nostr_events_sign",
-      "status": "planned",
+      "status": "stable",
       "summary": "Sign an unsigned Nostr event.",
       "nip": [
         "nip-01"
@@ -893,7 +893,7 @@
     },
     {
       "name": "nostr_events_post_anonymous",
-      "status": "planned",
+      "status": "stable",
       "summary": "Post anonymous note with one-time key.",
       "nip": [
         "nip-01"

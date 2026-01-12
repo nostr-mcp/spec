@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- promote create/sign/anonymous note tools to stable
+- promote profile lookup tool to stable
+
 ## 0.1.1
 
 - promote NIP-23 long-form tools to stable
