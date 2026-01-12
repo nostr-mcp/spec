@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- add NIP-18 repost tool
+
 ## 0.1.2
 
 - promote create/sign/anonymous note tools to stable
