@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6
+
+- add NIP-11 relay info tool
+
 ## 0.1.5
 
 - add NIP-9 deletion tool

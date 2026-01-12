@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.5",
-  "registry_version": "0.1.5",
+  "spec_version": "0.1.6",
+  "registry_version": "0.1.6",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -224,6 +224,22 @@
       "summary": "List relay status and flags.",
       "nip": [
         "nip-01"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_relays_get_info",
+      "status": "stable",
+      "summary": "Fetch relay information document.",
+      "nip": [
+        "nip-11"
       ],
       "input_schema": {
         "type": "object",
