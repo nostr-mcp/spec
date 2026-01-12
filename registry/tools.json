@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.3",
-  "registry_version": "0.1.3",
+  "spec_version": "0.1.4",
+  "registry_version": "0.1.4",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -753,6 +753,22 @@
       "summary": "List kind 30023 long-form notes.",
       "nip": [
         "nip-23"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_parse_refs",
+      "status": "stable",
+      "summary": "Parse nostr: references in text content.",
+      "nip": [
+        "nip-27"
       ],
       "input_schema": {
         "type": "object",

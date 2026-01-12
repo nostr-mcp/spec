@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- add NIP-27 reference parsing tool
+
 ## 0.1.3
 
 - add NIP-18 repost tool
