@@ -1,4 +1,4 @@
-# nostr-mcp spec v0.1.8
+# nostr-mcp spec v0.1.9
 
 ## Purpose
 

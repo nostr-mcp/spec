@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.8",
-  "registry_version": "0.1.8",
+  "spec_version": "0.1.9",
+  "registry_version": "0.1.9",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -272,6 +272,38 @@
       "summary": "Verify a NIP-05 identifier against a pubkey.",
       "nip": [
         "nip-05"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_nip44_encrypt",
+      "status": "planned",
+      "summary": "Encrypt plaintext with NIP-44.",
+      "nip": [
+        "nip-44"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_nip44_decrypt",
+      "status": "planned",
+      "summary": "Decrypt NIP-44 ciphertext.",
+      "nip": [
+        "nip-44"
       ],
       "input_schema": {
         "type": "object",

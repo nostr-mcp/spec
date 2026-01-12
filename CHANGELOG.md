@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9
+
+- add NIP-44 tool entries
+
 ## 0.1.8
 
 - add NIP-05 identifier resolve/verify tools
