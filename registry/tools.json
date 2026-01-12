@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.9",
-  "registry_version": "0.1.9",
+  "spec_version": "0.1.10",
+  "registry_version": "0.1.10",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -284,7 +284,7 @@
     },
     {
       "name": "nostr_nip44_encrypt",
-      "status": "planned",
+      "status": "stable",
       "summary": "Encrypt plaintext with NIP-44.",
       "nip": [
         "nip-44"
@@ -300,10 +300,26 @@
     },
     {
       "name": "nostr_nip44_decrypt",
-      "status": "planned",
+      "status": "stable",
       "summary": "Decrypt NIP-44 ciphertext.",
       "nip": [
         "nip-44"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_events_parse_emojis",
+      "status": "stable",
+      "summary": "Parse NIP-30 emoji tags and shortcode mentions.",
+      "nip": [
+        "nip-30"
       ],
       "input_schema": {
         "type": "object",

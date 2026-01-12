@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.10
+
+- add NIP-30 emoji parsing tool
+- promote NIP-44 tools to stable
+
 ## 0.1.9
 
 - add NIP-44 tool entries
