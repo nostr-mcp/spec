@@ -1,6 +1,6 @@
 {
-  "spec_version": "0.1.11",
-  "registry_version": "0.1.11",
+  "spec_version": "0.1.12",
+  "registry_version": "0.1.12",
   "tools": [
     {
       "name": "nostr_keys_generate",
@@ -336,6 +336,54 @@
       "summary": "Publish a NIP-89 handler information event.",
       "nip": [
         "nip-89"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_badges_define",
+      "status": "stable",
+      "summary": "Publish a NIP-58 badge definition event.",
+      "nip": [
+        "nip-58"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_badges_award",
+      "status": "stable",
+      "summary": "Publish a NIP-58 badge award event.",
+      "nip": [
+        "nip-58"
+      ],
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "output_schema": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    {
+      "name": "nostr_badges_set_profile",
+      "status": "stable",
+      "summary": "Publish a NIP-58 profile badges event.",
+      "nip": [
+        "nip-58"
       ],
       "input_schema": {
         "type": "object",

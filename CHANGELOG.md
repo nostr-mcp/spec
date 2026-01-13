@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.12
+
+- add NIP-58 badge tools
+
 ## 0.1.11
 
 - add NIP-89 handler recommendation tools
